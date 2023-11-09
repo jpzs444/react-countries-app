@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div className="m-4">
+    <div className="text-base text-very-dark-blue-text bg-very-light-gray">
       <Router>
-        <Navbar/>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:detailsPageURL" element={<Details />} />

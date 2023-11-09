@@ -57,8 +57,8 @@ const Home = () => {
   const dataValues = [countries, filteredCountries];
 
   return (
-    <div>
-      <div className="flex justify-between">
+    <div className="max-w-[1440px] mx-auto">
+      <div className="flex flex-col justify-between mt-6 px-4 bg-very-light-gray">
         {countries && <Search onSearchChange={handleOnSearchChange} isReset={resetSearch} />}
         {countries && <Filter onFilterChange={handleOnFilterChange} isReset={resetSelect} />}
       </div>

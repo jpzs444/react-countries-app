@@ -10,3 +10,52 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+body {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.search-div ion-icon {
+  position: absolute;
+  font-size: 18px;
+  color: hsl(0, 0%, 76%);
+  top: 12px;
+  left: 32px;
+}
+
+select {
+  background-image: url("https://img.icons8.com/material-two-tone/18/expand-arrow--v1.png");
+  background-repeat: no-repeat;
+  background-position: right 1.8em center;
+}
+
+.filter-div ion-icon {
+  position: absolute;
+  left: 48%;
+}
+
+/*
+Style Guide from Frontend Mentor:
+
+### Neutral
+
+- Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Homepage Items: 14px
+- Detail Page: 16px 
+
+### Fonts
+
+- Family: [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans)
+- Weights: 300, 600, 800
+
+*/

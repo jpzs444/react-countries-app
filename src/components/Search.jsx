@@ -11,15 +11,15 @@ const Search = ({ onSearchChange, isReset }) => {
   console.log(searchValue)
   
   return (
-    <div>
+    <div className="search-div relative">
+      <ion-icon name="search-sharp"></ion-icon>
       <input 
         id="search" 
         name="search" 
         type="search" 
         placeholder="Search for a country..."
         onChange={handleOnChange}
-        className="px-2 outline outline-2 outline-gray-200"
-
+        className="w-full pl-[4.5rem] pr-[2rem] py-3 outline outline-0 bg-white-custom rounded-md shadow-md placeholder:font-nunito placeholder:text-sm placeholder:opacity-70 font-nunito text-sm text-dark-gray appearance-none"
         value={isReset ? "" : searchValue}
       />
     </div>

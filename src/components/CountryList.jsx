@@ -13,13 +13,15 @@ const CountryList = ({ data }) => {
   }, [data]);
 
   return (
-    <div className="mt-4">
-      <ul>
+    <div className="pt-8 px-16 bg-very-light-gray">
+      <ul className="grid grid-cols-1 gap-8">
         {data[neededData].map((country, index) => (
           <li key={index}><CountryCard countryData={country} countriesData={data[0]} /></li>
         ))}
 
-        {data[1] && data[1].length === 0 && <p>No results found.</p>}
+        {data[1] && data[1].length === 0 && 
+          <p className="text-center">No results found.</p>
+        }
       </ul>
     </div>
   )
