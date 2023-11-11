@@ -20,7 +20,7 @@ const CountryList = ({ data }) => {
         ))}
 
         {data[1] && data[1].length === 0 && 
-          <p className="text-center">No results found.</p>
+          <p className="text-center text-sm">No results found.</p>
         }
       </ul>
     </div>

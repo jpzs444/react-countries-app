@@ -6,11 +6,22 @@ const BorderButton = ({ borderCode, countriesData }) => {
   console.log(borderData);
 
   return (
-    <button type="button">
-      <Link to={`/details?country=${borderData[0].name.common}`} state={{ countryData: borderData[0], countriesData: countriesData }}>
-        {borderData[0].name.common}
-      </Link>
-    </button>
+    <Link 
+      to={`/details?country=${borderData[0].name.common}`} 
+      state={{ countryData: borderData[0], countriesData: countriesData }}
+      // For linking to the top of the page
+      onClick={() => {
+        window.scroll({
+          top: 0,
+          left: 0,
+          behavior: "instant",
+        });
+      }}
+    >
+      <button type="button" className="w-full h-full p-2 bg-white-custom drop-shadow-md font-nunito">
+          {borderData[0].name.common}
+      </button>
+    </Link>
   )
 }
 

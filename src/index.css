@@ -34,6 +34,10 @@ select {
   left: 48%;
 }
 
+.border-countries {
+  grid-auto-rows: 1fr;
+}
+
 /*
 Style Guide from Frontend Mentor:
 
