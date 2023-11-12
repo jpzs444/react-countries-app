@@ -13,6 +13,12 @@ export default {
         'dark-gray': 'hsl(0, 0%, 52%)',
         'very-light-gray': 'hsl(0, 0%, 98%)',
         'white-custom': 'hsl(0, 0%, 100%)'
+      },
+      screens: {
+        'xs': '430px',
+        // => @media (min-width: 820px) { ... }
+        'md-2': '820px',
+        // iPad Air => @media (min-width: 820px) { ... }
       }
     },
   },

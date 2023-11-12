@@ -19,7 +19,7 @@ const Search = ({ onSearchChange, isReset }) => {
         type="search" 
         placeholder="Search for a country..."
         onChange={handleOnChange}
-        className="w-full pl-[4.5rem] pr-[2rem] py-3 outline outline-0 bg-white-custom rounded-md shadow-md placeholder:font-nunito placeholder:text-sm placeholder:opacity-70 font-nunito text-sm text-dark-gray appearance-none"
+        className="w-full pl-[4.5rem] pr-[2rem] py-3 outline outline-0 bg-white-custom rounded-md shadow-md placeholder:font-nunito placeholder:font-normal placeholder:text-sm placeholder:opacity-70 font-nunito font-semibold text-sm text-dark-gray appearance-none md:w-[400px] xl:w-[486px]"
         value={isReset ? "" : searchValue}
       />
     </div>

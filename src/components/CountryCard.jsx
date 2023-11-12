@@ -15,7 +15,7 @@ const CountryCard = ({ countryData, countriesData }) => {
       }}
     >
       <button type="button" className="flex flex-col w-full h-[330px] bg-white-custom outline outline-0 rounded-md overflow-hidden text-left shadow-md">
-          <div className="w-full h-[150px] /*outline outline-1*/">
+          <div className="w-full h-[150px] /*outline outline-1*/ shadow-sm">
             <img src={countryData.flags.png} alt={countryData.flags.alt} className="w-full h-full object-fill"/>
           </div>
           <div className="p-6 text-sm w-full">

@@ -56,9 +56,13 @@ const Home = () => {
   console.log("filtered:", filteredCountries);
   const dataValues = [countries, filteredCountries];
 
+  // TODO: Adjust text sizes accdg to FEM guide
+  // TODO: Adjust Search and Filter sizes
+  // TODO: Details Page! XD
+
   return (
-    <div className="max-w-[1440px] mx-auto pt-6 pb-16">
-      <div className="flex flex-col justify-between px-4 bg-very-light-gray">
+    <div className="max-w-[1440px] mx-auto pt-6 pb-16 lg:pt-10">
+      <div className="flex flex-col gap-10 px-4 bg-very-light-gray md:flex-row md:justify-between md:gap-0 lg:px-16">
         {countries && <Search onSearchChange={handleOnSearchChange} isReset={resetSearch} />}
         {countries && <Filter onFilterChange={handleOnFilterChange} isReset={resetSelect} />}
       </div>

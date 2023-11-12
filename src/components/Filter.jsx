@@ -11,37 +11,37 @@ const Filter = ({ onFilterChange, isReset }) => {
   console.log(selectedRegion);
 
   return (
-    <div className="filter-div mt-10">
+    <div className="filter-div">
       {/* <ion-icon name="chevron-down-sharp"></ion-icon> */}
       <select 
         id="regions" 
         name="regions" 
         onChange={handleOnChange} 
         value={ isReset ? "" : selectedRegion}
-        className="w-3/5 py-3 px-6 text-sm outline outline-none rounded-md shadow-md bg-white-custom appearance-none"
+        className="w-3/5 py-3 px-6 text-sm outline outline-none rounded-md shadow-md bg-white-custom appearance-none font-nunito font-semibold text-dark-gray hover:cursor-pointer md:w-full md:pl-6 md:pr-16"
       >
         <option value="" hidden>
           Filter by Region
         </option>
-        <option value="All" className="">
+        <option value="All" className="font-semibold">
           All
         </option>
-        <option value="Africa" className="">
+        <option value="Africa" className="font-semibold">
           Africa
         </option>
-        <option value="Americas" className="">
+        <option value="Americas" className="font-semibold">
           America
         </option>
-        <option value="Antarctic" className="">
+        <option value="Antarctic" className="font-semibold">
           Antarctic
         </option>
-        <option value="Asia" className="">
+        <option value="Asia" className="font-semibold">
           Asia
         </option>
-        <option value="Europe" className="">
+        <option value="Europe" className="font-semibold">
           Europe
         </option>
-        <option value="Oceania" className="">
+        <option value="Oceania" className="font-semibold">
           Oceania
         </option>
       </select>

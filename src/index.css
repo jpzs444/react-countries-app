@@ -11,7 +11,12 @@
   scroll-behavior: smooth;
 }
 
+/* html {
+  overflow-y: scroll;
+} */
+
 body {
+  overflow-y: scroll;
   background-color: hsl(0, 0%, 98%);
 }
 
@@ -26,7 +31,7 @@ body {
 select {
   background-image: url("https://img.icons8.com/material-two-tone/18/expand-arrow--v1.png");
   background-repeat: no-repeat;
-  background-position: right 1.8em center;
+  background-position: right 1.2em center;
 }
 
 .filter-div ion-icon {
@@ -36,6 +41,15 @@ select {
 
 .border-countries {
   grid-auto-rows: 1fr;
+}
+
+@media only screen and (min-width: 430px) and (max-width: 767.9px) {
+  .country-list-div {
+    width: 302.4px;
+    padding: 2rem 0 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /*
