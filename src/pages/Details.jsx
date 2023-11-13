@@ -37,25 +37,25 @@ const Details = () => {
   console.log("Language Names: ", languageNames);
 
   return (
-    <div className="max-w-[1440px] mx-auto px-6 pt-8 pb-16">
-      <button type="button" className="px-6 py-1.5 flex items-center gap-1.5 font-nunito text-sm bg-white-custom drop-shadow-md" onClick={goBack}>
+    <div className="max-w-[1440px] mx-auto px-6 pt-8 pb-16 lg:px-16">
+      <button type="button" className="px-6 py-1.5 flex items-center gap-1.5 font-nunito text-sm text-very-dark-blue-text bg-white-custom outline outline-none rounded-md drop-shadow-md md:text-base md:px-9 md:gap-2.5" onClick={goBack}>
         <ion-icon name="arrow-back-outline"></ion-icon>
         <p>Back</p>
       </button>
 
       {/* For country details: flag and info */}
-      <article className="mt-14 text-sm grid grid-cols-1  sm:grid-cols-2 gap-8">
+      <article className="details-article mt-14 text-sm grid grid-cols-1 gap-8 lg:max-w-full lg:grid-cols-2 lg:gap-14 xl:max-w-full xl:gap-28">
         {/* For flag */}
-        <div className="w-full h-[12.5rem]">
-          <img src={countryData.flags.png} className="w-full h-full object-fill"/>
+        <div className="flag-div w-full h-[12.5rem] drop-shadow-md">
+          <img src={countryData.flags.png} className="w-full h-full object-contain"/>
         </div>
         {/* For info */}
-        <article>
-          <p className="mb-5 font-bold text-xl">
+        <article className="lg:flex lg:flex-col lg:justify-center">
+          <p className="mb-5 font-bold text-xl md:mb-7 md:text-2xl lg:text-3xl">
             {countryData.name.common}
           </p>
           
-          <div className="grid grid-cols-1 gap-10">
+          <div className="grid grid-cols-1 gap-10 mb-10 md:text-base lg:grid-cols-2 lg:gap-5 xl:gap-20">
             <div>
               <p className="font-semibold">
                 Native Name: <span className="font-normal">{countryData.name.nativeName[nativeCode].common}</span>
@@ -86,14 +86,14 @@ const Details = () => {
             </div>
           </div>
 
-          <div>
-            <p className="mt-10 text-base font-semibold">Border Countries:</p>
-            <ul className="border-countries mt-3 grid grid-cols-3 gap-2">
+          <div className="flex flex-col gap-4 lg:flex-row">
+            <p className="/*mt-10*/ text-base font-semibold lg:mt-1.5">Border Countries:</p>
+            <ul className="border-countries grid grid-cols-3 gap-2 xl:grid-cols-4">
               {countryData.borders.map((border, index) => (
                 <li key={index}><BorderButton borderCode={border} countriesData={countriesData} /></li>
               ))}
             </ul>
-            {countryData.borders.length === 0 && <p>No border countries</p>}
+            {countryData.borders.length === 0 && <p className="md:text-base lg:mt-1.5">No border countries</p>}
           </div>
         </article>
       </article>
