@@ -25,6 +25,10 @@ img {
   pointer-events: none;
 }
 
+.body-dark-bg {
+  background-color: hsl(207, 26%, 17%);
+}
+
 .search-div ion-icon {
   position: absolute;
   font-size: 18px;
@@ -33,8 +37,15 @@ img {
   left: 32px;
 }
 
-select {
+.select-img-black {
   background-image: url("https://img.icons8.com/material-two-tone/18/expand-arrow--v1.png");
+}
+
+.select-img-white {
+  background-image: url("https://img.icons8.com/material-sharp/18/ffffff/expand-arrow--v1.png");
+}
+
+.select-default {
   background-repeat: no-repeat;
   background-position: right 1.2em center;
 }

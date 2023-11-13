@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { fetchCountriesData } from "../api";
 import { CountryList, Filter, Search } from "../components";
 
-const Home = () => {
+const Home = ({ theme }) => {
   const [countries, setCountries] = useState(null);
   const [filteredCountries, setFilteredCountries] = useState(null);
   const [resetSelect, setResetSelect] = useState(false);
@@ -56,17 +56,13 @@ const Home = () => {
   console.log("filtered:", filteredCountries);
   const dataValues = [countries, filteredCountries];
 
-  // TODO: Adjust text sizes accdg to FEM guide
-  // TODO: Adjust Search and Filter sizes
-  // TODO: Details Page! XD
-
   return (
     <div className="max-w-[1440px] mx-auto pt-6 pb-16 lg:pt-10">
-      <div className="flex flex-col gap-10 px-4 bg-very-light-gray md:flex-row md:justify-between md:gap-0 lg:px-16">
+      <div className="flex flex-col gap-10 px-4 bg-very-light-gray dark:bg-very-dark-blue md:flex-row md:justify-between md:gap-0 lg:px-16">
         {countries && <Search onSearchChange={handleOnSearchChange} isReset={resetSearch} />}
-        {countries && <Filter onFilterChange={handleOnFilterChange} isReset={resetSelect} />}
+        {countries && <Filter onFilterChange={handleOnFilterChange} isReset={resetSelect} theme={theme} />}
       </div>
-      {countries && <CountryList data={dataValues}/>}
+      {countries && <CountryList data={dataValues} />}
     </div>
   )
 }

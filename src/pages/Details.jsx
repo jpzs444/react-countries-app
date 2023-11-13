@@ -38,7 +38,7 @@ const Details = () => {
 
   return (
     <div className="max-w-[1440px] mx-auto px-6 pt-8 pb-16 lg:px-16">
-      <button type="button" className="px-6 py-1.5 flex items-center gap-1.5 font-nunito text-sm text-very-dark-blue-text bg-white-custom outline outline-none rounded-md drop-shadow-md md:text-base md:px-9 md:gap-2.5" onClick={goBack}>
+      <button type="button" className="px-6 py-1.5 flex items-center gap-1.5 font-nunito text-sm text-very-dark-blue-text dark:text-white-custom bg-white-custom dark:bg-dark-blue outline outline-none rounded-md drop-shadow-md dark:drop-shadow-lg md:text-base md:px-9 md:gap-2.5" onClick={goBack}>
         <ion-icon name="arrow-back-outline"></ion-icon>
         <p>Back</p>
       </button>
@@ -46,7 +46,7 @@ const Details = () => {
       {/* For country details: flag and info */}
       <article className="details-article mt-14 text-sm grid grid-cols-1 gap-8 lg:max-w-full lg:grid-cols-2 lg:gap-14 xl:max-w-full xl:gap-28">
         {/* For flag */}
-        <div className="flag-div w-full h-[12.5rem] drop-shadow-md">
+        <div className="flag-div w-full h-[12.5rem] drop-shadow-md dark:drop-shadow-lg">
           <img src={countryData.flags.png} className="w-full h-full object-contain"/>
         </div>
         {/* For info */}
@@ -58,30 +58,30 @@ const Details = () => {
           <div className="grid grid-cols-1 gap-10 mb-10 md:text-base lg:grid-cols-2 lg:gap-5 xl:gap-20">
             <div>
               <p className="font-semibold">
-                Native Name: <span className="font-normal">{countryData.name.nativeName[nativeCode].common}</span>
+                Native Name: <span className="font-normal dark:font-light">{countryData.name.nativeName[nativeCode].common}</span>
               </p>
               <p className="pt-2 font-semibold">
-                Population: <span className="font-normal">{countryData.population.toLocaleString()}</span>
+                Population: <span className="font-normal dark:font-light">{countryData.population.toLocaleString()}</span>
               </p>
               <p className="pt-2 font-semibold">
-                Region: <span className="font-normal">{countryData.region}</span>
+                Region: <span className="font-normal dark:font-light">{countryData.region}</span>
               </p>
               <p className="pt-2 font-semibold">
-                Sub Region: {countryData.subregion ? (<span className="font-normal">{countryData.subregion}</span>) : (<span className="font-normal italic">No information</span>)}
+                Sub Region: {countryData.subregion ? (<span className="font-normal dark:font-light">{countryData.subregion}</span>) : (<span className="font-normal dark:font-light italic">No information</span>)}
               </p>
               <p className="pt-2 font-semibold">
-                Capital: {countryData.capital.length ? (<span className="font-normal">{countryData.capital.join(", ")}</span>) : (<span className="font-normal italic">No information</span>)}
+                Capital: {countryData.capital.length ? (<span className="font-normal dark:font-light">{countryData.capital.join(", ")}</span>) : (<span className="font-normal dark:font-light italic">No information</span>)}
               </p>
             </div>
             <div>
               <p className="font-semibold">
-                Top Level Domain: <span className="font-normal">{countryData.tld.join(", ")}</span>
+                Top Level Domain: <span className="font-normal dark:font-light">{countryData.tld.join(", ")}</span>
               </p>
               <p className="pt-2 font-semibold">
-                Currencies: {currencyNames.length ? (<span className="font-normal">{currencyNames.join(", ")}</span>) : (<span className="font-normal italic">No information</span>)}
+                Currencies: {currencyNames.length ? (<span className="font-normal dark:font-light">{currencyNames.join(", ")}</span>) : (<span className="font-normal dark:font-light italic">No information</span>)}
               </p>
               <p className="pt-2 font-semibold">
-                Languages: <span className="font-normal">{languageNames.join(", ")}</span>
+                Languages: <span className="font-normal dark:font-light">{languageNames.join(", ")}</span>
               </p>
             </div>
           </div>

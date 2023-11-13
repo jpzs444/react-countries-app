@@ -14,20 +14,20 @@ const CountryCard = ({ countryData, countriesData }) => {
         })
       }}
     >
-      <button type="button" className="flex flex-col w-full h-[330px] bg-white-custom outline outline-0 rounded-md overflow-hidden text-left shadow-md">
+      <button type="button" className="flex flex-col w-full h-[330px] bg-white-custom dark:bg-dark-blue outline outline-0 rounded-md overflow-hidden text-left shadow-md dark:shadow-lg">
           <div className="w-full h-[150px] /*outline outline-1*/ shadow-sm">
             <img src={countryData.flags.png} alt={countryData.flags.alt} className="w-full h-full object-fill"/>
           </div>
           <div className="p-6 text-sm w-full">
             <h2 className="font-nunito font-extrabold text-lg leading-5">{countryData.name.common}</h2>
             <p className="pt-4 font-semibold">
-              Population: <span className="font-normal">{countryData.population.toLocaleString()}</span>
+              Population: <span className="font-normal dark:font-light">{countryData.population.toLocaleString()}</span>
             </p>
             <p className="pt-0.5 font-semibold">
-              Region: <span className="font-normal">{countryData.region}</span>
+              Region: <span className="font-normal dark:font-light">{countryData.region}</span>
             </p>
             <p className="pt-0.5 font-semibold">
-              Capital: {countryData.capital.length ? (<span className="font-normal">{countryData.capital.join(", ")}</span>) : (<span className="font-normal italic">No information</span>)}
+              Capital: {countryData.capital.length ? (<span className="font-normal dark:font-light">{countryData.capital.join(", ")}</span>) : (<span className="font-normal dark:font-light italic">No information</span>)}
             </p>
           </div>
       </button>

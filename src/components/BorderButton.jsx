@@ -18,7 +18,7 @@ const BorderButton = ({ borderCode, countriesData }) => {
         });
       }}
     >
-      <button type="button" className="w-full h-full p-2 bg-white-custom outline outline-none rounded-md drop-shadow-md font-nunito text-very-dark-blue-text">
+      <button type="button" className="w-full h-full p-2 bg-white-custom dark:bg-dark-blue outline outline-none rounded-md drop-shadow-md font-nunito text-very-dark-blue-text dark:text-white-custom">
           {borderData[0].name.common}
       </button>
     </Link>
