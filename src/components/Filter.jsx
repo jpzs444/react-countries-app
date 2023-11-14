@@ -18,7 +18,7 @@ const Filter = ({ onFilterChange, isReset, theme }) => {
         name="regions" 
         onChange={handleOnChange} 
         value={ isReset ? "" : selectedRegion}
-        className={`${theme === 'dark' ? 'select-img-white' : 'select-img-black'} select-default w-3/5 py-3 px-6 text-sm outline outline-none rounded-md shadow-md dark:shadow-lg bg-white-custom dark:bg-dark-blue appearance-none font-nunito text-dark-gray dark:text-very-light-gray hover:cursor-pointer md:w-full md:pl-6 md:pr-16`}
+        className={`${theme === 'dark' ? 'select-img-white' : 'select-img-black'} select-default w-3/5 py-3 px-6 text-sm outline outline-none rounded-md shadow-md dark:shadow-lg bg-white-custom dark:bg-dark-blue appearance-none font-nunito text-dark-gray dark:text-very-light-gray hover:cursor-pointer focus:outline-2 focus:outline-dark-gray focus:-outline-offset-2 md:w-full md:pl-6 md:pr-16`}
       >
         <option value="" hidden>
           Filter by Region

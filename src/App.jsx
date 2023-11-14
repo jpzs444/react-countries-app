@@ -30,7 +30,6 @@ const App = () => {
   useEffect(() => {
     if (theme === 'dark') {
       document.body.classList.add('dark', 'body-dark-bg');
-
     } else {
       document.body.classList.remove('dark', 'body-dark-bg');
     }
@@ -40,7 +39,7 @@ const App = () => {
   return (
     <div className="text-base text-very-dark-blue-text dark:text-white-custom bg-very-light-gray dark:bg-very-dark-blue">
       <Router>
-        <Navbar onModeClick={handleOnModeClick} />
+        <Navbar onModeClick={handleOnModeClick} theme={theme} />
         <Routes>
           <Route path="/" element={<Home theme={theme}/>} />
           <Route path="/:detailsPageURL" element={<Details />} />

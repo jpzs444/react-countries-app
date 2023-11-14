@@ -38,7 +38,7 @@ const Details = () => {
 
   return (
     <div className="max-w-[1440px] mx-auto px-6 pt-8 pb-16 lg:px-16">
-      <button type="button" className="px-6 py-1.5 flex items-center gap-1.5 font-nunito text-sm text-very-dark-blue-text dark:text-white-custom bg-white-custom dark:bg-dark-blue outline outline-none rounded-md drop-shadow-md dark:drop-shadow-lg md:text-base md:px-9 md:gap-2.5" onClick={goBack}>
+      <button type="button" className="px-6 py-1.5 flex items-center gap-1.5 font-nunito text-sm text-very-dark-blue-text dark:text-white-custom bg-white-custom dark:bg-dark-blue outline outline-none rounded-md drop-shadow-md dark:drop-shadow-lg hover:text-opacity-80 dark:hover:text-opacity-80 hover:drop-shadow-sm dark:hover:drop-shadow-sm transition-all md:text-base md:px-9 md:gap-2.5" onClick={goBack}>
         <ion-icon name="arrow-back-outline"></ion-icon>
         <p>Back</p>
       </button>

@@ -14,7 +14,7 @@ const CountryCard = ({ countryData, countriesData }) => {
         })
       }}
     >
-      <button type="button" className="flex flex-col w-full h-[330px] bg-white-custom dark:bg-dark-blue outline outline-0 rounded-md overflow-hidden text-left shadow-md dark:shadow-lg">
+      <button type="button" className="flex flex-col w-full h-[330px] bg-white-custom dark:bg-dark-blue outline outline-0 rounded-md overflow-hidden text-left shadow-md dark:shadow-lg hover:-translate-y-1 hover:shadow-dark-blue dark:hover:shadow-gray-800 hover:transition-all hover:duration-300">
           <div className="w-full h-[150px] /*outline outline-1*/ shadow-sm">
             <img src={countryData.flags.png} alt={countryData.flags.alt} className="w-full h-full object-fill"/>
           </div>
